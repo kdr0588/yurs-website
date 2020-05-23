@@ -1,0 +1,348 @@
+/* 
+=========================
+HEADER
+=========================
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding: 10px 30px 10px 30px;
+  background-color: black;
+}
+
+header > div > h1 {
+  display: inline-block;
+  /* font-size: 20px; */
+  font-size: 1.3em;
+  color: white;
+  font-weight: 100;
+}
+
+header > nav {
+  display: inline-block;
+}
+
+header > nav > ul {
+  /* display: inline-block; */
+  list-style: none;
+  /* margin-top: 30px; */
+  /* text-align: right; */
+  /* margin-left: 470px; */
+}
+
+header > nav > ul > li {
+  display: inline-block;
+  margin-left: 70px;
+  /* font-size: 15px; */
+  font-size: 1em;
+}
+
+header > nav > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 
+=========================
+SLOGAN
+=========================
+*/
+
+body {
+  -webkit-backface-visibility: hidden;
+}
+
+body:after {
+  display: none;
+  content: url(".././img/learn.jpeg");
+}
+
+.slogans {
+  display: flex;
+}
+
+#learn {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(".././img/learn.jpeg");
+  background-size: 40vw;
+  /* background-size: 550px; */
+  border-right: 1px gray solid;
+}
+
+#learn-img:hover {
+  background-image: url(".././img/learn.jpeg");
+  transition: background-image 2s linear;
+  /* -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; */
+}
+
+#build {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(38, 38, 38, 0.5),
+      rgba(38, 38, 38, 0.5)
+    ),
+    url(".././img/build.jpeg");
+  background-size: 41vw;
+  border-right: 1px gray solid;
+}
+
+#compete {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(".././img/compete.jpeg");
+  background-size: 35vw;
+  background-position: 50% 50%;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  margin: 0;
+  padding: 0;
+  /* height: 250px; */
+  height: 20vw;
+  width: auto;
+  width: 33.33%;
+  background-size: contain;
+  text-decoration: none;
+}
+
+/* .slogan-img {
+  width: 33%;
+  height: auto;
+  position: relative;
+  background-color: black;
+  z-index: 5;
+} */
+
+/* .overlay {
+  background-color: black;
+  display: inline-block;
+  z-index: 100;
+  border: 1px red solid;
+} */
+
+.slogan-text {
+  display: inline-block;
+  /* position: relative; */
+  /* text-align: center; */
+  /* top: 50px; */
+  color: white;
+  /* font-size: 50px; */
+  font-size: 4em;
+  /* vertical-align: middle; */
+  /* z-index: 1000; */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.slogan-link {
+  display: inline;
+}
+
+/* 
+=========================
+MID
+=========================
+*/
+
+.mid {
+  background-color: black;
+  height: 120px;
+  display: flex;
+  border-top: 1px gray solid;
+  border-bottom: 1px gray solid;
+}
+
+.join-btn {
+  display: inline-block;
+  background-color: #c4c4c4;
+  color: black;
+  margin: auto;
+  padding: 10px 100px;
+  font-size: 2em;
+  border-radius: 10em;
+  /* position: relative;
+  left: 50%;
+  transform: translateX(-50%); */
+  text-decoration: none;
+}
+
+/* 
+=========================
+TEAMS
+=========================
+*/
+
+.teams {
+  display: flex;
+}
+
+.team {
+  width: 50%;
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* height: 400px; */
+  height: 60vh;
+}
+
+#sumobot {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(".././img/sumobot.jpeg");
+  background-size: 55vw;
+  border-right: 1px gray solid;
+}
+
+#rover {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(".././img/rover.jpeg");
+  background-size: 80vw;
+  background-position: 50% 50%;
+}
+
+.team-text-box {
+  position: relative;
+  text-align: center;
+  /* top: 150px; */
+  font-size: 50px;
+  color: white;
+}
+
+.team-text {
+  padding: 0;
+  margin: 0;
+}
+
+/* 
+=========================
+FINAL
+=========================
+*/
+
+.final {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(".././img/circ.jpg");
+  height: 50vw;
+  background-position-y: -13vh;
+  border-top: 1px gray solid;
+}
+
+/* 
+=========================
+FOOTER
+=========================
+*/
+
+footer {
+  box-sizing: border-box;
+
+  background-color: black;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#copyright {
+  color: #313131;
+  display: inline-block;
+}
+
+.social {
+  display: inline-block;
+}
+
+.social-icon {
+  height: 22px;
+  width: 22px;
+  margin-left: 10px;
+}
+
+.credits {
+  color: #313131;
+  margin-left: 30px;
+}
+
+/* 
+=========================
+stick footer to bottom
+=========================
+*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* margin: 0 0 100px; */
+  /* bottom = footer height */
+  /* padding: 25px; */
+}
+
+footer {
+  /* background-color: orange; */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* height: 100px; */
+
+  /* overflow: hidden; */
+}
+
+/* 
+=========================
+Credits Page
+=========================
+*/
+
+body.credits-page {
+  background-color: gray;
+}
+
+.credits-div {
+  margin: 20px;
+}
+
+/* 
+=========================
+Default Layout
+=========================
+*/
