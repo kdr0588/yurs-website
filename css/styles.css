@@ -10,6 +10,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* @media only screen and (max-width: 1140px) {
+  body {
+    display: none;
+  }
+} */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -139,7 +145,7 @@ body:after {
   /* top: 50px; */
   color: white;
   /* font-size: 50px; */
-  font-size: 4em;
+  font-size: 6vw;
   /* vertical-align: middle; */
   /* z-index: 1000; */
   /* position: absolute;
@@ -164,20 +170,6 @@ MID
   display: flex;
   border-top: 1px gray solid;
   border-bottom: 1px gray solid;
-}
-
-.join-btn {
-  display: inline-block;
-  background-color: #c4c4c4;
-  color: black;
-  margin: auto;
-  padding: 10px 100px;
-  font-size: 2em;
-  border-radius: 10em;
-  /* position: relative;
-  left: 50%;
-  transform: translateX(-50%); */
-  text-decoration: none;
 }
 
 /* 
@@ -240,10 +232,84 @@ FINAL
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url(".././img/circ.jpg");
+    url(".././img/circ.jpeg");
   height: 50vw;
-  background-position-y: -13vh;
+  background-position-y: -5vw;
+  background-size: 120vw;
   border-top: 1px gray solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px gray solid;
+}
+
+.join-btn {
+  display: inline-block;
+  /* text-align: center; */
+  background-color: #c4c4c4;
+  color: black;
+  margin: 0 auto;
+  padding: 1vh 10vw;
+  border-radius: 10em;
+  text-decoration: none;
+}
+
+.join-btn-parent {
+  /* padding-bottom: 40vw; */
+  font-size: 2vw;
+  margin-bottom: auto;
+  margin-top: 25px;
+}
+
+.final > p {
+  color: white;
+  /* margin-bottom: 40vw; */
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* column-gap: 100px; */
+  grid-column-gap: 5vw;
+  /* justify-content: space-between; */
+  margin: 0 5vw;
+}
+
+.blog-post {
+  padding: 10px 5px 5px 20px;
+  background-color: rgba(24, 24, 24, 0.5);
+}
+
+.blog-title {
+  color: white;
+}
+
+.blog-body {
+  color: white;
+}
+
+.blog-link {
+  color: white;
+}
+
+.some-text {
+  display: lock;
+  text-align: left;
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.some-text {
+  color: white;
+}
+
+.some-text > p > a {
+  color: white;
+}
+
+.text-and-blog-posts {
+  margin-bottom: 5vw;
 }
 
 /* 
