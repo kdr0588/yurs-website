@@ -297,7 +297,7 @@ FINAL
   display: lock;
   text-align: left;
   margin-right: auto;
-  margin-left: 20px;
+  margin-left: 5vw;
 }
 
 .some-text {
@@ -437,4 +437,10 @@ Teams Page
 .team-text-p {
   padding: 0;
   margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .blog-posts {
+    display: none;
+  }
 }
