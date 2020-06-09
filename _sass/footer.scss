@@ -1,0 +1,29 @@
+footer {
+  box-sizing: border-box;
+
+  background-color: black;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#copyright {
+  color: #313131;
+  display: inline-block;
+}
+
+.social {
+  display: inline-block;
+}
+
+.social-icon {
+  height: 22px;
+  width: 22px;
+  margin-left: 10px;
+}
+
+.credits {
+  color: #313131;
+  margin-left: 30px;
+}

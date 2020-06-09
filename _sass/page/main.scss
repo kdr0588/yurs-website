@@ -1,75 +1,11 @@
 /* 
 =========================
-HEADER
-=========================
-*/
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* @media only screen and (max-width: 1140px) {
-  body {
-    display: none;
-  }
-} */
-
-header {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  padding: 10px 30px 10px 30px;
-  background-color: black;
-}
-
-header > div > h1 {
-  display: inline-block;
-  /* font-size: 20px; */
-  font-size: 1.3em;
-  color: white;
-  font-weight: 100;
-}
-
-header > nav {
-  display: inline-block;
-}
-
-header > nav > ul {
-  /* display: inline-block; */
-  list-style: none;
-  /* margin-top: 30px; */
-  /* text-align: right; */
-  /* margin-left: 470px; */
-}
-
-header > nav > ul > li {
-  display: inline-block;
-  margin-left: 70px;
-  /* font-size: 15px; */
-  font-size: 1em;
-}
-
-header > nav > ul > li > a {
-  color: white;
-  text-decoration: none;
-}
-
-/* 
-=========================
 SLOGAN
 =========================
 */
 
 body {
   -webkit-backface-visibility: hidden;
-}
-
-body:after {
-  display: none;
-  content: url(".././img/learn.jpeg");
 }
 
 .slogans {
@@ -83,21 +19,21 @@ body:after {
 }
 
 /* #learn-img:hover {
-  background-image: url(".././img/learn.jpeg");
-  transition: background-image 2s linear;
-  /* -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden; 
-} */
+    background-image: url(".././img/learn.jpeg");
+    transition: background-image 2s linear;
+    /* -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden; 
+  } */
 
 #build-img {
   background-image: url(".././img/build.jpeg");
   background-size: 41vw;
   border-right: 1px gray solid;
   /* border-right: 1px gray solid;
-  border: solid 150px #f008;
-  box-sizing: border-box;
-  transition: 1s ease-out; */
+    border: solid 150px #f008;
+    box-sizing: border-box;
+    transition: 1s ease-out; */
 }
 
 .overlay:after {
@@ -149,9 +85,9 @@ body:after {
   /* vertical-align: middle; */
   /* z-index: 1000; */
   /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
 }
 
 .slogan-link {
@@ -159,10 +95,10 @@ body:after {
 }
 
 /* 
-=========================
-MID
-=========================
-*/
+  =========================
+  MID
+  =========================
+  */
 
 .mid {
   background-color: black;
@@ -173,10 +109,10 @@ MID
 }
 
 /* 
-=========================
-TEAMS
-=========================
-*/
+  =========================
+  TEAMS
+  =========================
+  */
 
 .teams {
   display: flex;
@@ -221,10 +157,10 @@ TEAMS
 }
 
 /* 
-=========================
-FINAL
-=========================
-*/
+  =========================
+  FINAL
+  =========================
+  */
 
 .final {
   background-image: linear-gradient(
@@ -247,11 +183,11 @@ FINAL
 .join-btn {
   display: inline-block;
   /* text-align: center; */
-  background-color: #c4c4c4;
+  background-color: rgba($color: #c4c4c4, $alpha: 0.5);
   color: black;
   margin: 0 auto;
   padding: 1vh 10vw;
-  border-radius: 10em;
+  //   border-radius: 10em;
   text-decoration: none;
 }
 
@@ -310,137 +246,4 @@ FINAL
 
 .text-and-blog-posts {
   margin-bottom: 5vw;
-}
-
-/* 
-=========================
-FOOTER
-=========================
-*/
-
-footer {
-  box-sizing: border-box;
-
-  background-color: black;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-#copyright {
-  color: #313131;
-  display: inline-block;
-}
-
-.social {
-  display: inline-block;
-}
-
-.social-icon {
-  height: 22px;
-  width: 22px;
-  margin-left: 10px;
-}
-
-.credits {
-  color: #313131;
-  margin-left: 30px;
-}
-
-/* 
-=========================
-stick footer to bottom
-=========================
-*/
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* margin: 0 0 100px; */
-  /* bottom = footer height */
-  /* padding: 25px; */
-}
-
-footer {
-  /* background-color: orange; */
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  /* height: 100px; */
-
-  /* overflow: hidden; */
-}
-
-/* 
-=========================
-Credits Page
-=========================
-*/
-
-body.credits-page {
-  background-color: gray;
-}
-
-.credits-div {
-  margin: 20px;
-}
-
-/* 
-=========================
-Default Layout
-=========================
-*/
-
-.content {
-  margin: 0 10vw;
-}
-
-/* 
-=========================
-Teams Page
-=========================
-*/
-
-.team.on-team-page {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  height: 44vw;
-  text-decoration: none;
-}
-
-#sumobot.on-team-page {
-  background-size: 80vw;
-  border-right: 1px gray solid;
-}
-
-#rover.on-team-page {
-  /* background-image: url(".././img/rover.jpeg"); */
-  background-size: 85vw;
-  background-position: 50% 50%;
-}
-
-.team-text-box-p {
-  position: relative;
-  text-align: center;
-  font-size: 50px;
-  color: white;
-}
-
-.team-text-p {
-  padding: 0;
-  margin: 0;
-}
-
-@media only screen and (max-width: 1000px) {
-  .blog-posts {
-    display: none;
-  }
 }

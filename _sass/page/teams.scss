@@ -1,0 +1,33 @@
+.team.on-team-page {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  height: 44vw;
+  text-decoration: none;
+}
+
+#sumobot.on-team-page {
+  background-size: 80vw;
+  border-right: 1px gray solid;
+}
+
+#rover.on-team-page {
+  /* background-image: url(".././img/rover.jpeg"); */
+  background-size: 85vw;
+  background-position: 50% 50%;
+}
+
+.team-text-box-p {
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+
+.team-text-p {
+  padding: 0;
+  margin: 0;
+}
