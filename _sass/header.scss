@@ -5,42 +5,61 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
   margin: 0;
   padding: 0;
   padding: 10px 30px 10px 30px;
   background-color: black;
 }
 
-header>div>h1 {
+header>nav>div.logo {
+  display: flex;
+
+}
+
+header>nav>div>img {
+  width: 8vw;
+  height: auto;
+}
+
+header>nav>div>h1 {
   display: inline-block;
   /* font-size: 20px; */
   font-size: 1.5vw;
   color: white;
   font-weight: 100;
+  margin-top: 3.2vw;
+  padding-top: auto;
+  margin-left: 5px;
+
 }
 
 header>nav {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+
 }
 
-header>nav>ul {
+.nav-links {
   /* display: inline-block; */
   list-style: none;
   /* margin-top: 30px; */
   /* text-align: right; */
   /* margin-left: 470px; */
+  margin-left: auto;
+  margin-top: 3vw;
+
 }
 
-header>nav>ul>li {
+.nav-link {
   display: inline-block;
   margin-left: 70px;
   /* font-size: 15px; */
-  font-size: 1em;
+  font-size: 1.3vw;
 }
 
-header>nav>ul>li>a {
+.nav-link>a {
   color: white;
   text-decoration: none;
 }

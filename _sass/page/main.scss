@@ -188,6 +188,7 @@ body {
   padding: 1vh 10vw;
   //   border-radius: 10em;
   text-decoration: none;
+  font-size: 2vw;
 }
 
 .join-btn-parent {
@@ -200,6 +201,7 @@ body {
 .final>p {
   color: white;
   /* margin-bottom: 40vw; */
+  font-size: 1vw;
 }
 
 .blog-posts {
@@ -229,18 +231,20 @@ body {
 }
 
 .some-text {
-  display: lock;
-  text-align: left;
-  margin-right: auto;
+  display: block;
+  // text-align: left;
+  // margin-right: auto;
   margin-left: 5vw;
 }
 
 .some-text {
   color: white;
+  font-size: 1.5vw;
 }
 
 .some-text>p>a {
   color: white;
+  font-size: 1.5vw;
 }
 
 .text-and-blog-posts {

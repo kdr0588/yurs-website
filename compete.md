@@ -1,0 +1,4 @@
+---
+title: Compete
+layout: post
+---

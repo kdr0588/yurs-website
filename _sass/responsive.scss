@@ -12,19 +12,22 @@
 
 @media only screen and (max-width: 1140px) {
   .line {
-    width: 30px;
-    height: 3px;
+    width: 5vw;
+    height: 0.5vw;
     background: white;
-    margin: 5px;
+    margin: .7vw;
   }
 
   .hamburger {
-    position: absolute;
+    position: relative;
     cursor: pointer;
-    right: 2%;
-    top: 5%;
-    transform: translate(-5%, -50%);
-    z-index: 100;
+    right: 3%;
+    // top: 6%;
+    // transform: translate(-5%, -50%);
+    z-index: 150;
+    // margin-top: 1vw;
+    // margin-left: auto;
+    margin-top: 3vw;
   }
 
   .nav-links {
@@ -60,8 +63,8 @@
 
   .nav-link-responsive>a {
     color: white;
-    // font-size: vw;
   }
+
 }
 
 @media only screen and (max-width: 650px) {
@@ -73,6 +76,10 @@
   .slogan {
     width: 100%;
     height: 50vw;
+  }
+
+  .slogan-text {
+    font-size: 10vw;
   }
 
   #learn-img {
@@ -96,6 +103,10 @@
     width: 100%;
   }
 
+  .team-text {
+    font-size: 10vw;
+  }
+
   #sumobot {
     background-size: 150vw;
   }
@@ -103,4 +114,16 @@
   #rover {
     background-size: 150vw;
   }
+}
+
+@media only screen and (max-width: 950px) {
+
+  header>nav>div>h1 {
+    display: none;
+  }
+
+  header>nav>div>img {
+    width: 8vw;
+  }
+
 }
