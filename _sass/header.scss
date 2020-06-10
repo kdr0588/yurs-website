@@ -13,19 +13,19 @@ header {
   background-color: black;
 }
 
-header > div > h1 {
+header>div>h1 {
   display: inline-block;
   /* font-size: 20px; */
-  font-size: 1.3em;
+  font-size: 1.5vw;
   color: white;
   font-weight: 100;
 }
 
-header > nav {
+header>nav {
   display: inline-block;
 }
 
-header > nav > ul {
+header>nav>ul {
   /* display: inline-block; */
   list-style: none;
   /* margin-top: 30px; */
@@ -33,14 +33,14 @@ header > nav > ul {
   /* margin-left: 470px; */
 }
 
-header > nav > ul > li {
+header>nav>ul>li {
   display: inline-block;
   margin-left: 70px;
   /* font-size: 15px; */
   font-size: 1em;
 }
 
-header > nav > ul > li > a {
+header>nav>ul>li>a {
   color: white;
   text-decoration: none;
 }

@@ -58,8 +58,49 @@
     margin-bottom: 8vw;
   }
 
-  .nav-link-responsive > a {
+  .nav-link-responsive>a {
     color: white;
     // font-size: vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+
+  .slogans {
+    display: block;
+  }
+
+  .slogan {
+    width: 100%;
+    height: 50vw;
+  }
+
+  #learn-img {
+    background-size: 100vw;
+    background-position-y: 40%;
+  }
+
+  #build-img {
+    background-size: 100vw;
+  }
+
+  #compete-img {
+    background-size: 100vw;
+  }
+
+  .teams {
+    display: block;
+  }
+
+  .team {
+    width: 100%;
+  }
+
+  #sumobot {
+    background-size: 150vw;
+  }
+
+  #rover {
+    background-size: 150vw;
   }
 }
