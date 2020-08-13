@@ -1,4 +1,8 @@
 ---
 title: Rover
-layout: post
+layout: team
 ---
+
+# Rover Team
+
+![Rover](img/compete.jpeg)
