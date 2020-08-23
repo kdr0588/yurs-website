@@ -13,32 +13,31 @@ header {
   background-color: black;
 }
 
-header>nav>div.logo {
+header > nav > div.logo {
   display: flex;
-
 }
 
-header>nav>div>img {
-  width: 8vw;
+header > nav > div > img {
+  width: 100px;
   height: auto;
 }
 
-header>nav>div>h1 {
+header > nav > div > h1 {
   display: inline-block;
   /* font-size: 20px; */
-  font-size: 1.5vw;
+  // font-size: 1.5vw;
+  font-size: 20px;
   color: white;
   font-weight: 100;
-  margin-top: 3.2vw;
+  padding-top: 30px;
+  // margin-top: 3.2vw;
   padding-top: auto;
   margin-left: 5px;
-
 }
 
-header>nav {
+header > nav {
   display: flex;
   justify-content: space-between;
-
 }
 
 .nav-links {
@@ -48,18 +47,18 @@ header>nav {
   /* text-align: right; */
   /* margin-left: 470px; */
   margin-left: auto;
-  margin-top: 3vw;
-
+  // margin-top: 3vw;
+  margin-top: 50px;
 }
 
 .nav-link {
   display: inline-block;
   margin-left: 70px;
   /* font-size: 15px; */
-  font-size: 1.3vw;
+  font-size: 15px;
 }
 
-.nav-link>a {
+.nav-link > a {
   color: white;
   text-decoration: none;
 }

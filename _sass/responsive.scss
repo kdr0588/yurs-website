@@ -12,10 +12,10 @@
 
 @media only screen and (max-width: 1140px) {
   .line {
-    width: 5vw;
-    height: 0.5vw;
+    width: 50px;
+    height: 2px;
     background: white;
-    margin: .7vw;
+    margin: 8px;
   }
 
   .hamburger {
@@ -61,14 +61,12 @@
     margin-bottom: 8vw;
   }
 
-  .nav-link-responsive>a {
+  .nav-link-responsive > a {
     color: white;
   }
-
 }
 
 @media only screen and (max-width: 650px) {
-
   .slogans {
     display: block;
   }
@@ -117,13 +115,11 @@
 }
 
 @media only screen and (max-width: 950px) {
-
-  header>nav>div>h1 {
+  header > nav > div > h1 {
     display: none;
   }
 
-  header>nav>div>img {
+  header > nav > div > img {
     width: 8vw;
   }
-
 }

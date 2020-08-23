@@ -7,3 +7,6 @@ serve-linux:
 build:
 	jekyll build
 
+build-linux:
+	bundle exec jekyll build
+
