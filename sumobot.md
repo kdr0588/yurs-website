@@ -1,4 +1,0 @@
----
-title: Sumobot
-layout: post
----
