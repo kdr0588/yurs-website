@@ -79,7 +79,7 @@
 
 .dark-layer {
   background-color: black;
-  opacity: 50%;
+  opacity: 30%;
   position: absolute;
   top: 0;
   left: 0;
@@ -87,7 +87,7 @@
   height: 100%;
 }
 
-/* Intro */
+/* Home Page */
 
 #intro {
   background: url("images/overlay.png"), url("../../img/circ.jpeg");
@@ -99,6 +99,16 @@
   background-position-x: 60%;
 }
 
+#about {
+  background: url("images/overlay.png"), url("../../img/about-us.jpeg");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+  background-position-y: 70%;
+}
+
+// rover page
+
 #intro-rover {
   background: url("images/overlay.png"), url("../../img/rover.jpeg");
   background-size: 256px 256px, cover;
@@ -106,6 +116,43 @@
   background-position: top left, bottom center;
   background-repeat: repeat, no-repeat;
 }
+
+#rover-point-1 {
+  background: url("images/overlay.png"),
+    url("../../img/rover-software-team.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+#rover-point-2 {
+  background: url("images/overlay.png"), url("../../img/rover-science-team.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+#rover-point-3 {
+  background: url("images/overlay.png"),
+    url("../../img/rover-electrical-team-1.jpeg");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+#rover-point-4 {
+  background: url("images/overlay.png"),
+    url("../../img/rover-mechanical-team.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+// sumobot page
 
 #intro-sumobot {
   background: url("images/overlay.png"), url("../../img/sumobot.jpeg");
@@ -116,24 +163,39 @@
   background-position: 10% 30%;
 }
 
-/* One */
-
-#one {
-  background: url("images/overlay.png"), url("../../img/about-us.jpeg");
+#sumobot-point-1 {
+  background: url("images/overlay.png"),
+    url("../../img/sumobot-soldering-event.jpeg");
   background-size: 256px 256px, cover;
   background-attachment: fixed, fixed;
-  background-position: top left, center center;
-  background-position-y: 70%;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+  // background-position-y: 60%;
+  //   background-position-x: 110%;
+  //   background-position: center left;
 }
+
+#sumobot-point-2 {
+  background: url("images/overlay.png"), url("../../img/sumobot-win.jpeg");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+  background-position-y: 60%;
+  //   background-position-x: 110%;
+  //   background-position: center left;
+}
+
+/* One */
 
 /* Two */
 
-#two {
-  background: url("images/overlay.png"), url("../../images/two.jpg");
-  background-size: 256px 256px, cover;
-  background-attachment: fixed, fixed;
-  background-position: top left, center center;
-}
+// #two {
+//   background: url("images/overlay.png"), url("../../images/two.jpg");
+//   background-size: 256px 256px, cover;
+//   background-attachment: fixed, fixed;
+//   background-position: top left, center center;
+// }
 
 /* Teams */
 
