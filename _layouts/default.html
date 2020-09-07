@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body>
-    {% include header.html %}
-    <div class="wrapper">
-      {{ content }}
-
-      <div class="push"></div>
-    </div>
-
-    {% include footer.html %}
+  <body class="is-preload">
+    {% include header.html %} {{ content }} {% include footer.html %} {% include
+    scripts.html %}
   </body>
 </html>
