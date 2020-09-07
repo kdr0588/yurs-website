@@ -6,85 +6,108 @@
 
 /* Header */
 
-	#header {
-		position: fixed;
-		z-index: 10000;
-		left: 0;
-		top: 0;
-		width: 100%;
-		background: transparentize(_palette(bg), 0.05);
-		height: 3em;
-		line-height: 3em;
-		box-shadow: 0 0 0.15em 0 rgba(0,0,0,0.1);
+#header {
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: transparentize(_palette(bg), 0.05);
+  height: 3em;
+  line-height: 3em;
+  box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
 
-		h1 {
-			position: absolute;
-			left: 1em;
-			top: 0;
-			height: 3em;
-			line-height: 3em;
-			cursor: default;
+  #logo {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    margin: 12px 0 0 5px;
+    display: inline;
+  }
 
-			a {
-				font-size: 1.25em;
-			}
-		}
+  h1 {
+    position: absolute;
+    left: 1em;
+    top: 0;
+    height: 3em;
+    line-height: 3em;
+    cursor: default;
 
-		nav {
-			position: absolute;
-			right: 0.5em;
-			top: 0;
-			height: 3em;
-			line-height: 3em;
+    margin-left: 25px;
 
-			ul {
-				margin: 0;
+    a {
+      font-size: 1.25em;
+    }
+  }
 
-				li {
-					display: inline-block;
-					margin-left: 0.5em;
-					font-size: 0.9em;
+  nav {
+    position: absolute;
+    right: 0.5em;
+    top: 0;
+    height: 3em;
+    line-height: 3em;
 
-					a {
-						display: block;
-						color: inherit;
-						text-decoration: none;
-						height: 3em;
-						line-height: 3em;
-						padding: 0 0.5em 0 0.5em;
-						outline: 0;
-					}
-				}
-			}
-		}
+    ul {
+      margin: 0;
 
-		@include breakpoint('<=small') {
-			height: 2.5em;
-			line-height: 2.5em;
+      li {
+        display: inline-block;
+        margin-left: 0.5em;
+        font-size: 0.9em;
 
-			h1 {
-				text-align: center;
-				position: relative;
-				left: 0;
-				top: 0;
-				height: 2.5em;
-				line-height: 2.5em;
+        a {
+          display: block;
+          color: inherit;
+          text-decoration: none;
+          height: 3em;
+          line-height: 3em;
+          padding: 0 0.5em 0 0.5em;
+          outline: 0;
+        }
+      }
+    }
+  }
 
-				a {
-					font-size: 1em;
-				}
-			}
+  @include breakpoint("<=large") {
+    #logo {
+      // display: none;
+      width: 2em;
+    }
+  }
 
-			nav {
-				display: none;
-			}
-		}
-	}
+  @include breakpoint("<=small") {
+    height: 2.5em;
+    line-height: 2.5em;
 
-	body {
-		padding-top: 3em;
+    h1 {
+      // text-align: center;
+      position: relative;
+      left: 0;
+      top: 0;
+      height: 2.5em;
+      line-height: 2.5em;
 
-		@include breakpoint('<=small') {
-			padding-top: 2.5em;
-		}
-	}
+      a {
+        font-size: 1em;
+      }
+    }
+
+    nav {
+      // display: none;
+      display: relative;
+    }
+
+    #logo {
+      width: 1.5em;
+      // margin-top: 0.5px;
+    }
+  }
+}
+
+body {
+  padding-top: 3em;
+
+  @include breakpoint("<=small") {
+    padding-top: 2.5em;
+  }
+}
