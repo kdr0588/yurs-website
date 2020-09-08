@@ -16,6 +16,7 @@ git add *
 git commit -m "New changes to website."
 git push
 git checkout master
+echo "Publish complete"
 
 # read -p "Please enter your msg: " msg
 # if [[ -z "$msg" ]];
