@@ -1,6 +1,6 @@
 echo "Initiating PUBLISH script"
 echo "Building website"
-cd website && bundle exec jekyll build
+cd website && bundle exec jekyll build && cd ..
 echo "Website built"
 echo "Initiating transfer to gh_pages repo"
 mv website/_site .
