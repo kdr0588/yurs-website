@@ -12,15 +12,18 @@ cp -r _site/* .
 rm -rf _site website
 echo "Transfer complete"
 echo "Initiating publish"
+git add *
+git commit -m "New changes to website."
+git push
+git checkout master
 
-read -p "Please enter your msg: " msg
+# read -p "Please enter your msg: " msg
+# if [[ -z "$msg" ]];
+# then
+#     echo "No message was input, resorting to default msg: $DEFAULT_MSG"
+#     $msg = $DEFAULT_MSG
+# else
+#     echo "msg is not empty, using '$msg'"
+# fi
 
-if [[ -z "$msg" ]];
-then
-    echo "No message was input, resorting to default msg: $DEFAULT_MSG"
-    $msg = $DEFAULT_MSG
-else
-    echo "msg is not empty, using '$msg'"
-fi
-
-echo "commit -m $msg"
+# echo "commit -m $msg"
