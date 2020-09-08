@@ -1,12 +1,8 @@
-serve: 
-	jekyll serve
-
-serve-linux:
+serve:
 	cd website && bundle exec jekyll serve
 
 build:
-	jekyll build
-
-build-linux:
 	bundle exec jekyll build
 
+publish:
+	bash publish.bash
