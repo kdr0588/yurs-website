@@ -116,8 +116,24 @@ small.new {
 }
 
 .iframeVideo {
-  width: 36vw;
+  width: 32vw;
   height: 20vw;
+}
+
+@include breakpoint("<=xxlarge") {
+  .iframeVideo {
+    // display: none;
+    width: 32vw;
+    height: 20vw;
+  }
+}
+
+@include breakpoint("<=medium") {
+  .iframeVideo {
+    // display: none;
+    width: 50vw;
+    height: 30vw;
+  }
 }
 
 @include breakpoint("<=small") {
