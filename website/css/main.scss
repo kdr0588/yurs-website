@@ -115,6 +115,18 @@ small.new {
   color: red;
 }
 
+.iframeVideo {
+  width: 36vw;
+  height: 20vw;
+}
+
+@include breakpoint("<=small") {
+  .iframeVideo {
+    width: 80vw;
+    height: 50vw;
+  }
+}
+
 #about {
   background: url("images/overlay.png"), url("../../img/about-us.jpeg");
   background-size: 256px 256px, cover;
