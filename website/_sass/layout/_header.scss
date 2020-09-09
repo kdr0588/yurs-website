@@ -75,6 +75,14 @@
     }
   }
 
+  // @include breakpoint("<=xsmall") {
+  //   #logo {
+  //     // display: none;
+  //     width: 2em;
+  //     display: none;
+  //   }
+  // }
+
   @include breakpoint("<=small") {
     height: 2.5em;
     line-height: 2.5em;
@@ -99,7 +107,9 @@
 
     #logo {
       width: 1.5em;
-      // margin-top: 0.5px;
+      margin-top: 9px;
+      // margin-left: 3px;
+      // display: none;
     }
   }
 }
