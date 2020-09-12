@@ -31,8 +31,12 @@ jobs:
       - name: Setup Node.js enviornemnt
         uses: actions/setup-node@v1.4.3
       
-      - name: Yarn CLI
-        uses: CultureHQ/actions-yarn@v1.0.
+      - name: Install yarn
+        run: |
+          curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+          echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+          sudo apt update && sudo apt install yarn
+          yarn --version
       
       - name: Install all dependencies
         run: |
