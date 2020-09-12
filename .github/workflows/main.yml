@@ -24,27 +24,29 @@ jobs:
       - uses: actions/checkout@v2
         
       - name: Setup Ruby enviornment
-      - uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6
-      - run: cd website && bundle install && cd ..
       
       - name: Setup Node.js enviornemnt
-      - uses: actions/setup-node@v1.4.3
+        uses: actions/setup-node@v1.4.3
       
       - name: Yarn CLI
-      - uses: CultureHQ/actions-yarn@v1.0.
-      - run: yarn
+        uses: CultureHQ/actions-yarn@v1.0.
       
-      - name: Build assets gulp
-      - run: gulp
+      - name: Install all dependencies
+        run: |
+          cd website && bundle install && cd ..
+          yarn
+      
+      - name: Build assets with gulp
+        run: gulp
       
       - name: Build site with Jekyll
-      - run: cd website && exec jekyll build && cd ..
+        run: cd website && exec jekyll build && cd ..
       
       - name: Checkout and push onto gh-pages
-      - uses: actions/checkout@v2
-      - run: |
+        run: |
           git config --global user.name 'Ibrahim Abdul Hammed'
           git config --global user.name 'ibrahim74115@gmail.com'
           mv website/_site .
