@@ -52,11 +52,11 @@ jobs:
       - name: Checkout and push onto gh-pages
         run: |
           git config --global user.name 'Ibrahim Abdul Hammed'
-          git config --global user.name 'ibrahim74115@gmail.com'
+          git config --global user.email 'ibrahim74115@gmail.com'
           mv website/_site .
           git checkout gh_pages
           cp -r _site/*
           rm -rf _site website node_modules
           git add *
           git commit -m "New changes to website."
-          git push
+          git push origin gh-pages
