@@ -12,7 +12,7 @@ echo "Initiating transfer to gh_pages repo"
 mv website/_site .
 git checkout gh_pages
 cp -r _site/* .
-rm -rf _site website
+rm -rf _site website node_modules
 echo "Transfer complete"
 echo "Initiating publish"
 git add *
