@@ -54,7 +54,6 @@ jobs:
           mkdir public
           cp -r website/_site/* public
           cd public
-          rm .nojekyll
           cd ..
 
       - name: Deploy
