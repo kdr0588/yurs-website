@@ -54,7 +54,7 @@ jobs:
           git config --global user.name 'Ibrahim Abdul Hammed'
           git config --global user.email 'ibrahim74115@gmail.com'
           mv website/_site .
-          git checkout gh_pages
+          git checkout -b gh_pages --track origin/gh_pages
           cp -r _site/*
           rm -rf _site website node_modules
           git add *
