@@ -2,6 +2,9 @@
 DEFAULT_MSG = "New changes to website."
 
 echo "Initiating PUBLISH script"
+echo "Running gulp"
+gulp
+echo "Gulp running has completed"
 echo "Building website"
 cd website && bundle exec jekyll build && cd ..
 echo "Website built"
