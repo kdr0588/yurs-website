@@ -22,66 +22,40 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-     
-      - name: testing
-        run: |
-          git branch -a
-          ls
-          touch testing.txt
-          echo 'Hello World' > testing.txt
-          ls
         
-      - name: testing2
-        uses: actions/checkout@v2
+      - name: Setup Ruby enviornment
+        uses: ruby/setup-ruby@v1
         with:
-          token: ${{ github.token }}  
-          ref: gh-pages
+          ruby-version: 2.7
       
-      - name: testing3
+      - name: Setup Node.js enviornemnt
+        uses: actions/setup-node@v1.4.3
+      
+      - name: Install yarn
         run: |
-          git branch -a
-          ls
-             
-     
-     
-#       - name: Setup Ruby enviornment
-#         uses: ruby/setup-ruby@v1
-#         with:
-#           ruby-version: 2.6
+          curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+          echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+          sudo apt update && sudo apt install yarn
+          yarn --version
       
-#       - name: Setup Node.js enviornemnt
-#         uses: actions/setup-node@v1.4.3
+      - name: Install all dependencies
+        run: |
+          cd website && bundle install && cd ..
+          yarn
       
-#       - name: Install yarn
-#         run: |
-#           curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-#           echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-#           sudo apt update && sudo apt install yarn
-#           yarn --version
+      - name: Build assets with gulp
+        run: gulp
       
-#       - name: Install all dependencies
-#         run: |
-#           cd website && bundle install && cd ..
-#           yarn
-      
-#       - name: Build assets with gulp
-#         run: gulp
-      
-#       - name: Build site with Jekyll
-#         run: cd website && exec jekyll build && cd ..
-      
-#       - name: Checkout and push onto gh-pages
-#         run: |
-#           git config --global user.name 'Ibrahim Abdul Hammed'
-#           git config --global user.email 'ibrahim74115@gmail.com'
-#           mv website/_site .
-#           echo "Was in branch:"
-#           git branch
-#           git checkout remotes/origin/gh_pages
-#           echo "Now in branch:"
-#           git branch
-#           cp -r _site/* .
-#           rm -rf _site website node_modules
-#           git add *
-#           git commit -m "New changes to website."
-#           git push origin gh-pages
+      - name: Build site with Jekyll
+        run: cd website && exec jekyll build && cd ..
+    
+      - name: Prepare for deployment
+        run: |
+          mkdir public
+          cp -r website/_site/* public
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
