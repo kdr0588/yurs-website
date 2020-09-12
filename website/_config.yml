@@ -34,7 +34,8 @@ twitter_link: https://twitter.com/yorkurobotics
 facebook_link: https://www.facebook.com/yorkurobotics/
 linkedin_link: https://www.linkedin.com/company/yurs/
 
-join_now_link: https://forms.gle/iQss3FENRCGWn1iu7
+# join_now_link: https://forms.gle/iQss3FENRCGWn1iu7
+join_now_link: /join
 
 # Build settings
 # theme: minima
