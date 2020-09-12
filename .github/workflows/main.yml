@@ -34,6 +34,7 @@ jobs:
       - name: testing2
         uses: actions/checkout@v2
         with:
+          token: ${{ github.token }}  
           ref: gh-pages
       
       - name: testing3
