@@ -77,7 +77,8 @@ jobs:
       - name: OWASP ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.3.0
         with:
-          target: http://localhost:8080 
+          target: http://localhost:8080
+          cmd_options: -I  
       
 
   deploy:
