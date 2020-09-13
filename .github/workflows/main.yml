@@ -48,7 +48,7 @@ jobs:
           cd public
           cd ..
 
-      - name: Save as an artificat
+      - name: Save as an artifact
         uses: actions/upload-artifact@master
         with:
           name: public-website
@@ -61,7 +61,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Download artificat
+      - name: Download artifact
         uses: actions/download-artifact@master
         with:
           name: public-website
