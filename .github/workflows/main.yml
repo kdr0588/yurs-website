@@ -108,7 +108,7 @@ jobs:
       - name: Run Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
-          accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
           author: ${{ github.actor }}
           outputDirectory: /tmp/artifacts
           urls: 'http://localhost:8080/,http://localhost:8080/rover,http://localhost:8080/sumobot'
