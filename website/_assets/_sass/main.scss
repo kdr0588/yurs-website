@@ -226,8 +226,33 @@ small.new {
   background-position: top left, bottom center;
   background-repeat: repeat, no-repeat;
   background-position-y: 60%;
-  //   background-position-x: 110%;
-  //   background-position: center left;
+}
+
+#sumobot-point-3 {
+  background: url("../img/overlay.png"), url("../img/sumobot-coding.jpg");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+  background-position-y: 60%;
+}
+
+#sumobot-point-4 {
+  background: url("../img/overlay.png"), url("../img/sumobot-circuits.jpeg");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+  background-position-y: 60%;
+}
+
+#sumobot-point-5 {
+  background: url("../img/overlay.png"), url("../img/sumobot-modeling.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+  background-position-y: 60%;
 }
 
 /* One */
