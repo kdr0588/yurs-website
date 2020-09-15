@@ -119,10 +119,26 @@ jobs:
         with:
           name: Lighthouse reports
           path: /tmp/artifacts
+          
+  html5-validation-testing:
+     runs-on: ubuntu-latest
+     needs: [build]
+     
+     steps:
+       - name: Download artifact
+         uses: actions/download-artifact@master
+         with:
+           name: public-website
+           path: ./public  
+
+       - name: HTML5 Validation
+         uses: Cyb3r-Jak3/html5validator-action@v0.4.2
+         with:
+           root: ./public 
    
   deploy:
     runs-on: ubuntu-latest
-    needs: [build,lighthouse-check,security-testing]
+    needs: [build,lighthouse-check,security-testing,html5-validation-testing]
 
     steps:
       - uses: actions/checkout@v2
