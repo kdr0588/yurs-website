@@ -35,7 +35,9 @@ const dirs = {
 function compileSassAndMinify() {
   return src(dirs.sass.src)
     .pipe(sass().on("error", sass.logError))
-    .pipe(cleanCSS({ compatibility: "ie8" }))
+    .pipe(
+      cleanCSS({ compatibility: "ie8", level: { 1: { specialComments: 0 } } })
+    )
     .pipe(rename({ extname: ".min.css" }))
     .pipe(dest(dirs.sass.dest));
 }
