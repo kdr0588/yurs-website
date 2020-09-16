@@ -21,6 +21,14 @@ const dirs = {
     src: "./website/_assets/js/*.js",
     dest: "./website/assets/js",
   },
+  svg: {
+    src: "./website/_assets/svg/*",
+    dest: "./website/assets/svg",
+  },
+  webfonts: {
+    src: "./website/_assets/webfonts/*",
+    dest: "./website/assets/webfonts",
+  },
 };
 
 function compileSassAndMinify() {
@@ -47,8 +55,22 @@ function minifyImages() {
   return src(dirs.img.src).pipe(imagemin()).pipe(dest(dirs.img.dest));
 }
 
+function processSvgs() {
+  return src(dirs.svg.src).pipe(dest(dirs.svg.dest));
+}
+
+function processWebfonts() {
+  return src(dirs.webfonts.src).pipe(dest(dirs.webfonts.dest));
+}
+
 function watchSass() {
   return watch(dirs.sass.src, ["sass"], series(compileSass));
 }
 
-exports.default = series(compileSassAndMinify, uglifyJS, minifyImages);
+exports.default = parallel(
+  compileSassAndMinify,
+  uglifyJS,
+  minifyImages,
+  processSvgs,
+  processWebfonts
+);
