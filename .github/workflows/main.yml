@@ -35,13 +35,13 @@ jobs:
           yarn
 
       - name: Build assets (such as imgs, css, js, etc.) with gulp (pre-build of website)
-        run: gulp --gulpfile pre.web.build.gulpfile.js
+        run: gulp prebuild
 
       - name: Build site with Jekyll
         run: cd website && exec jekyll build && cd ..
 
       - name: More gulp tasks for minification and optimization (post-build of website)
-        run: gulp --gulpfile post.web.build.gulpfile.js
+        run: gulp postbuild
 
       - name: Prepare
         run: |

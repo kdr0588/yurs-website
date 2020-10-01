@@ -1,4 +1,10 @@
-const { series, src, dest, parallel, watch } = require("gulp");
+const {
+  series,
+  src,
+  dest,
+  parallel,
+  watch
+} = require("gulp");
 
 const sass = require("gulp-sass");
 const cleanCSS = require("gulp-clean-css");
@@ -6,6 +12,7 @@ const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
 const imagemin = require("gulp-imagemin");
+const htmlmin = require("gulp-htmlmin");
 
 sass.compiler = require("node-sass");
 
@@ -30,15 +37,28 @@ const dirs = {
     src: "./website/_assets/webfonts/*",
     dest: "./website/assets/webfonts",
   },
+  html: {
+    src: "./website/_site/*.html",
+    dest: "./website/_site",
+  },
 };
 
 function compileSassAndMinify() {
   return src(dirs.sass.src)
     .pipe(sass().on("error", sass.logError))
     .pipe(
-      cleanCSS({ compatibility: "ie8", level: { 1: { specialComments: 0 } } })
+      cleanCSS({
+        compatibility: "ie8",
+        level: {
+          1: {
+            specialComments: 0
+          }
+        }
+      })
     )
-    .pipe(rename({ extname: ".min.css" }))
+    .pipe(rename({
+      extname: ".min.css"
+    }))
     .pipe(dest(dirs.sass.dest));
 }
 
@@ -50,7 +70,9 @@ function uglifyJS() {
       })
     )
     .pipe(uglify())
-    .pipe(rename({ extname: ".min.js" }))
+    .pipe(rename({
+      extname: ".min.js"
+    }))
     .pipe(dest(dirs.js.dest));
 }
 
@@ -70,10 +92,21 @@ function watchSass() {
   return watch(dirs.sass.src, ["sass"], series(compileSass));
 }
 
-exports.default = parallel(
+exports.prebuild = parallel(
   compileSassAndMinify,
   uglifyJS,
   minifyImages,
   processSvgs,
   processWebfonts
 );
+
+function minifyHtml() {
+  return src(dirs.html.src)
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
+    .pipe(dest(dirs.html.dest));
+}
+
+exports.postbuild = parallel(minifyHtml);
