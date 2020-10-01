@@ -40,6 +40,9 @@ jobs:
       - name: Build site with Jekyll
         run: cd website && exec jekyll build && cd ..
 
+      - name: Build link redirect pages
+        run: node create_site_redirect_links.js
+
       - name: More gulp tasks for minification and optimization (post-build of website)
         run: gulp postbuild
 
