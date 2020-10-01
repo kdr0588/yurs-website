@@ -38,7 +38,7 @@ jobs:
         run: gulp prebuild
 
       - name: Build site with Jekyll
-        run: cd website && exec jekyll build && cd ..
+        run: cd website && bundle exec jekyll build && cd ..
 
       - name: Build link redirect pages
         run: node create_site_redirect_links.js
