@@ -1,10 +1,7 @@
-const {
-  series,
-  src,
-  dest,
-  parallel,
-  watch
-} = require("gulp");
+const { series, src, dest, parallel, watch } = require("gulp");
+
+const fs = require("fs");
+const yaml = require("js-yaml");
 
 const sass = require("gulp-sass");
 const cleanCSS = require("gulp-clean-css");
@@ -51,14 +48,16 @@ function compileSassAndMinify() {
         compatibility: "ie8",
         level: {
           1: {
-            specialComments: 0
-          }
-        }
+            specialComments: 0,
+          },
+        },
       })
     )
-    .pipe(rename({
-      extname: ".min.css"
-    }))
+    .pipe(
+      rename({
+        extname: ".min.css",
+      })
+    )
     .pipe(dest(dirs.sass.dest));
 }
 
@@ -70,9 +69,11 @@ function uglifyJS() {
       })
     )
     .pipe(uglify())
-    .pipe(rename({
-      extname: ".min.js"
-    }))
+    .pipe(
+      rename({
+        extname: ".min.js",
+      })
+    )
     .pipe(dest(dirs.js.dest));
 }
 
@@ -92,6 +93,15 @@ function watchSass() {
   return watch(dirs.sass.src, ["sass"], series(compileSass));
 }
 
+try {
+  let fileContents = fs.readFileSync("./sites.yaml");
+  let data = yaml.safeLoad(fileContents);
+
+  console.log(data);
+} catch (e) {
+  console.log(e);
+}
+
 exports.prebuild = parallel(
   compileSassAndMinify,
   uglifyJS,
@@ -102,10 +112,12 @@ exports.prebuild = parallel(
 
 function minifyHtml() {
   return src(dirs.html.src)
-    .pipe(htmlmin({
-      collapseWhitespace: true,
-      removeComments: true
-    }))
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+        removeComments: true,
+      })
+    )
     .pipe(dest(dirs.html.dest));
 }
 
