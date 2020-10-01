@@ -1,7 +1,10 @@
-const { series, src, dest, parallel, watch } = require("gulp");
-
-const fs = require("fs");
-const yaml = require("js-yaml");
+const {
+  series,
+  src,
+  dest,
+  parallel,
+  watch
+} = require("gulp");
 
 const sass = require("gulp-sass");
 const cleanCSS = require("gulp-clean-css");
@@ -91,15 +94,6 @@ function processWebfonts() {
 
 function watchSass() {
   return watch(dirs.sass.src, ["sass"], series(compileSass));
-}
-
-try {
-  let fileContents = fs.readFileSync("./sites.yaml");
-  let data = yaml.safeLoad(fileContents);
-
-  console.log(data);
-} catch (e) {
-  console.log(e);
 }
 
 exports.prebuild = parallel(
