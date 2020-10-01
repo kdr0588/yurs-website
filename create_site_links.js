@@ -1,8 +1,8 @@
 const fs = require("fs");
 const yaml = require("js-yaml");
 
-let fileContents = fs.readFileSync("./sites.yaml");
-let data = yaml.safeLoad(fileContents);
+const fileContents = fs.readFileSync("./sites.yaml");
+const data = yaml.safeLoad(fileContents);
 
 function createHtmlFile(title, url) {
     return (
