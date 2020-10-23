@@ -12,7 +12,7 @@ This is the repository for the official YorkU Robotics website. https://yorkurob
 
 ## Main Developer(s)
 
-- [Ibrahim Abdul Hammed](githubhttps://github.com/CuriousIbrahim)
+- [Ibrahim Abdul Hammed](https://github.com/CuriousIbrahim)
 
 ## Design Template Credit
 
