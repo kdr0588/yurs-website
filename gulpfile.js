@@ -16,6 +16,8 @@ const htmlmin = require("gulp-htmlmin");
 
 sass.compiler = require("node-sass");
 
+const rootDir = "./website";
+
 const dirs = {
   sass: {
     src: "./website/_assets/_sass/**/*.scss",
@@ -81,7 +83,16 @@ function uglifyJS() {
 }
 
 function minifyImages() {
-  return src(dirs.img.src).pipe(imagemin()).pipe(dest(dirs.img.dest));
+  return src(dirs.img.src).pipe(imagemin([
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    imagemin.optipng({optimizationLevel: 7}),
+    imagemin.svgo({
+        plugins: [
+            {removeViewBox: true},
+            {cleanupIDs: false}
+        ]
+    })])).pipe(dest(dirs.img.dest));
 }
 
 function processSvgs() {
@@ -90,10 +101,6 @@ function processSvgs() {
 
 function processWebfonts() {
   return src(dirs.webfonts.src).pipe(dest(dirs.webfonts.dest));
-}
-
-function watchSass() {
-  return watch(dirs.sass.src, ["sass"], series(compileSass));
 }
 
 exports.prebuild = parallel(
@@ -116,3 +123,13 @@ function minifyHtml() {
 }
 
 exports.postbuild = parallel(minifyHtml);
+
+exports.buildImages = series(minifyImages);
+
+exports.dev = () => {
+  watch(dirs.sass.src, compileSassAndMinify);
+  watch(dirs.js.src, uglifyJS);
+  watch(dirs.html.src, minifyHtml);
+  watch(dirs.svg.src, processSvgs);
+  watch(dirs.webfonts.src, processWebfonts);
+}
