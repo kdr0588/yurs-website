@@ -16,15 +16,13 @@ const htmlmin = require("gulp-htmlmin");
 
 sass.compiler = require("node-sass");
 
-const rootDir = "./website";
-
 const dirs = {
   sass: {
     src: "./website/_assets/_sass/**/*.scss",
     dest: "./website/assets/css/",
   },
   img: {
-    src: "./website/_assets/img/*",
+    src: "./website/_assets/img/**",
     dest: "./website/assets/img",
   },
   js: {
@@ -95,6 +93,10 @@ function minifyImages() {
     })])).pipe(dest(dirs.img.dest));
 }
 
+function processImages() {
+  return src(dirs.img.src).pipe(dest(dirs.img.dest));
+}
+
 function processSvgs() {
   return src(dirs.svg.src).pipe(dest(dirs.svg.dest));
 }
@@ -107,6 +109,14 @@ exports.prebuild = parallel(
   compileSassAndMinify,
   uglifyJS,
   minifyImages,
+  processSvgs,
+  processWebfonts
+);
+
+exports.devprebuild = parallel(
+  compileSassAndMinify,
+  uglifyJS,
+  processImages,
   processSvgs,
   processWebfonts
 );
@@ -124,12 +134,10 @@ function minifyHtml() {
 
 exports.postbuild = parallel(minifyHtml);
 
-exports.buildImages = series(minifyImages);
-
 exports.dev = () => {
   watch(dirs.sass.src, compileSassAndMinify);
   watch(dirs.js.src, uglifyJS);
-  watch(dirs.html.src, minifyHtml);
   watch(dirs.svg.src, processSvgs);
   watch(dirs.webfonts.src, processWebfonts);
+  watch(dirs.img.src, processImages);
 }

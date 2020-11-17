@@ -17,5 +17,47 @@ join:
 eecszoom:
   title: EECS Zoom
   url: https://yorku.zoom.us/s/8657684154
+
+# Socials
+
+instagram:
+  title: Instagram
+  url: https://www.instagram.com/yorkurobotics
+
+twitter:
+  title: Twitter
+  url: https://twitter.com/yorkurobotics
+
+facebook:
+  title: Facebook
+  url: https://www.facebook.com/yorkurobotics/
+
+linkedin:
+  title: LinkedIn
+  url: https://www.linkedin.com/company/yurs/
+
+# Sponsors
  
-  
+lassonde:
+  title: Sponsor - Lassonde School of Engineering
+  url: https://lassonde.yorku.ca/
+
+yorku:
+  title: Sponsor - York University
+  url: https://www.yorku.ca/
+
+protocase:
+  title: Sponsor - Protocase
+  url: https://www.protocase.com/
+
+servocity:
+  title: Sponsor - ServoCity
+  url: https://www.servocity.com/
+
+elegoo:
+  title: Sponsor - Elegoo
+  url: https://www.elegoo.com/
+
+yfs:
+  title: Sponsor - YFS
+  url: https://www.yfs.ca/

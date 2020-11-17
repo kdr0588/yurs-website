@@ -306,3 +306,36 @@ small.new {
     }
   }
 }
+
+#sponsors {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+body.loaded:before {
+  content: none;
+}
+
+img.sponsor {
+  padding: 10px;
+}
+
+.platinum > a > img.sponsor {
+  width: 38%;
+  height: auto;
+}
+
+.gold > a > img.sponsor {
+  width: 33%;
+  height: auto;
+}
+
+.silver > a > img.sponsor {
+  width: 28%;
+  height: auto;
+}
+
+.bronze > a > img.sponsor {
+  width: 23%;
+  height: auto;
+}

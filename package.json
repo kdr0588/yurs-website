@@ -6,7 +6,12 @@
   "author": "Ibrahim Abdul Hammed <ibrahim@74115@gmail.com>",
   "license": "MIT",
   "private": true,
-  "dependencies": {
+  "scripts": {
+    "watch:jekyll": "cd website && bundle exec jekyll serve",
+    "watch:gulp": "gulp devprebuild && gulp dev",
+    "dev": "concurrently -n jekyll,gulp \"yarn watch:jekyll\" \"yarn watch:gulp\""
+  },
+  "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "concurrently": "^5.3.0",
