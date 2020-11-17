@@ -111,7 +111,7 @@ jobs:
         run: mkdir /tmp/artifacts
 
       - name: Run Lighthouse
-        uses: foo-software/lighthouse-check-action@2.0.5
+        uses: foo-software/lighthouse-check-action@v2.0.5
         with:
           accessToken: ${{ secrets.GITHUB_TOKEN }}
           author: ${{ github.actor }}
