@@ -16,8 +16,13 @@ join:
 
 eecszoom:
   title: EECS Zoom
-  url: https://yorku.zoom.us/s/8657684154
+  url: https://yorku.zoom.us/j/8657684154
 
+roverteamzoom:
+  title: Rover Team Zoom
+  url: https://yorku.zoom.us/j/8657684154
+  
+  
 # Socials
 
 instagram:
