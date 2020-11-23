@@ -40,6 +40,10 @@ facebook:
 linkedin:
   title: LinkedIn
   url: https://www.linkedin.com/company/yurs/
+  
+promovideo:
+  title: Promo Video
+  url: https://www.youtube.com/watch?v=3IPfEFFCeAA
 
 # Sponsors
  
@@ -67,12 +71,3 @@ yfs:
   title: Sponsor - YFS
   url: https://www.yfs.ca/
   
- # Miscellaneous
-
-promovideo:
-  title: Promo Video
-  url: https://www.youtube.com/watch?v=3IPfEFFCeAA
-  
-adam:
-  title: Adam's Zoom Room
-  url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
