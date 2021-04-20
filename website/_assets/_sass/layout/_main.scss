@@ -71,7 +71,7 @@
       @include vendor("justify-content", "flex-end");
     }
 
-    &.inactive {
+    &.inactive:not(.election) {
       &.left > .content {
         @include vendor("transform", "translateX(-100%)");
       }
