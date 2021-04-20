@@ -107,10 +107,6 @@
   background-position-y: 70%;
 }
 
-#video-nav-link {
-  color: red;
-}
-
 small.new {
   color: red;
 }
@@ -253,6 +249,73 @@ small.new {
   background-position: top left, bottom center;
   background-repeat: repeat, no-repeat;
   background-position-y: 60%;
+}
+
+// Elections
+
+#intro-elections {
+  background: url("../img/overlay.png"), url("../img/elections/home.jpeg");
+  background-size: 1000px 1000px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+#election-point-1 {
+  background: url("../img/overlay.png"), url("../img/elections/president.jpeg");
+  background-size: 10000px 10000px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+#election-point-2 {
+  background: url("../img/overlay.png"), url("../img/elections/treasurer.jpeg");
+  background-size: 10000px 10000px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+#election-point-3 {
+  background: url("../img/overlay.png"), url("../img/elections/outreach.jpeg");
+  background-size: 10000px 10000px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+#election-point-4 {
+  background: url("../img/overlay.png"),
+    url("../img/elections/fundraising.jpeg");
+  background-size: 10000px 10000px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+#election-point-5 {
+  background: url("../img/overlay.png"), url("../img/elections/lead.jpeg");
+  background-size: 10000px 10000px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+#election-point-6 {
+  background: url("../img/overlay.png"), url("../img/elections/social.jpeg");
+  background-size: 10000px 10000px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
+}
+
+#election-point-7 {
+  background: url("../img/overlay.png"), url("../img/elections/creative.jpeg");
+  background-size: 10000px 10000px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom center;
+  background-repeat: repeat, no-repeat;
 }
 
 /* One */
