@@ -3,8 +3,12 @@ zoom:
   url: https://yorku.zoom.us/j/3076421459?pwd=MFcwR1B5U0pGWi85OFA3a3FvTGdZQT09
 
 slack:
-  title: Slack
-  url: https://yorkurobotics.slack.com/signup#
+  title: Discord
+  url: https://discord.gg/tE2kHkD8TF
+ 
+discord:
+  title: Discord
+  url: https://discord.gg/tE2kHkD8TF
 
 fusion360:
   title: Fusion 360
