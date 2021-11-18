@@ -42,6 +42,11 @@ getstartedeecs:
   title: Get Started (EECS Team)
   url: https://github.com/YorkURobotics/yurs-rover-software-dev-guide
   
+# Events
+react:
+  title: React Discord Channel
+  url: https://discord.gg/tE2kHkD8TF
+  
 # Socials
 
 instagram:
